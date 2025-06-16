@@ -9,17 +9,15 @@ ARG USERNAME=user
 RUN apt-get -y update && \
 	apt-get -y upgrade && \
 	apt-get install --no-install-recommends -y \
-	openbox \
-	python3-xdg \
-	libpython3-dev \
-	x11vnc \
-	xvfb \
-	xterm \
-	xz-utils \
-	usbutils \
-	vim &&\
-	apt-get clean -y && \
-	apt-get autoremove --purge -y && \
+		openbox \
+		python3-xdg \
+		libpython3-dev \
+		x11vnc \
+		xvfb \
+		xterm \
+		xz-utils \
+		usbutils \
+		vim && \
 	rm -rf /var/lib/apt/lists/*
 
 # Add entrypoint script (it is in home because
